@@ -3,7 +3,7 @@ var name;
 var connectedUser;
 
 //connecting to our signaling server 
-var conn = new WebSocket('wss://18.142.128.26:8000' || 'wss://54.254.162.138:8000');
+var conn = new WebSocket('wss://audio-chat.onrender.com');
 
 conn.onopen = function () {
    console.log("Connected to the signaling server");

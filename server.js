@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
+const http = require("http");
 
 app.use((req, res, next) => {
    res.append('Access-Control-Allow-Origin', ['*']);
@@ -9,11 +10,12 @@ app.use((req, res, next) => {
    res.append('Access-Control-Allow-Headers', 'Content-Type');
    next();
 });
+const httpServer = http.createServer(app);
 //require our websocket library 
 var WebSocketServer = require('ws').Server; 
 
 //creating a websocket server at port 9090 
-var wss = new WebSocketServer({port: 8000}); 
+var wss = new WebSocketServer({server: httpServer}); 
 
 //all connected to the server users 
 var users = {};
