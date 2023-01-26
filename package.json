@@ -1,0 +1,18 @@
+{
+  "name": "audiochat",
+  "version": "1.0.0",
+  "description": "webrtc audio chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "ws": "^8.12.0"
+  }
+}
