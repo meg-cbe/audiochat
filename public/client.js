@@ -3,7 +3,7 @@ var name;
 var connectedUser;
 
 //connecting to our signaling server 
-var conn = new WebSocket('ws://192.168.1.2:9090');
+var conn = new WebSocket('ws://13.228.225.19:8000'|| 'ws://18.142.128.26:8000' || 'ws://54.254.162.138:8000');
 
 conn.onopen = function () {
    console.log("Connected to the signaling server");
